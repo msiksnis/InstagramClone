@@ -8,7 +8,7 @@ function Post({ username, caption, imageUrl }) {
       <div className="post__header">
         <Avatar
           className="post__avatar"
-          alt="siksnis"
+          alt="Siksnis"
           src="/static/image/avatar/1.jpg"
         />
 
@@ -16,7 +16,8 @@ function Post({ username, caption, imageUrl }) {
       </div>
       <img className="post__image" src={imageUrl} alt="" />
       <h4 className="post__text">
-        <strong>{username}:</strong> {caption}
+        <strong>{username}: </strong>
+        {caption}
       </h4>
     </div>
   );
