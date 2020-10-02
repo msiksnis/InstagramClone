@@ -103,7 +103,7 @@ function App() {
             <center>
               <img
                 className="app__headerImage"
-                src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/1280px-Instagram_logo.svg.png"
                 alt=""
               />
             </center>
@@ -138,7 +138,7 @@ function App() {
             <center>
               <img
                 className="app__headerImage"
-                src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/1280px-Instagram_logo.svg.png"
                 alt=""
               />
             </center>
