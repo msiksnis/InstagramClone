@@ -6,7 +6,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Modal from "@material-ui/core/Modal";
 import { Button, Input } from "@material-ui/core";
 import ImageUpload from "./components/imageUpload/ImageUpload";
-import InstagramEmbed from "react-instagram-embed";
+// import InstagramEmbed from "react-instagram-embed";
 
 function getModalStyle() {
   const top = 50;
@@ -164,7 +164,7 @@ function App() {
       <div className="app__header">
         <img
           className="app__headerImage"
-          src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/1280px-Instagram_logo.svg.png"
           alt=""
         />
         {user ? (
@@ -176,12 +176,6 @@ function App() {
           </div>
         )}
       </div>
-
-      {user?.displayName ? (
-        <ImageUpload username={user.displayName} />
-      ) : (
-        <h3>Sign In to upload</h3>
-      )}
 
       <div className="app__posts">
         <div className="app__postsLeft">
@@ -197,7 +191,19 @@ function App() {
           ))}
         </div>
         <div className="app__postsRight">
-          <InstagramEmbed
+          {user?.displayName ? (
+            <ImageUpload username={user.displayName} />
+          ) : (
+            // <h3>Sign In to upload</h3>
+            <Button
+              className="app__postsRightButton"
+              onClick={() => setOpenSignIn(true)}
+            >
+              Sign In to upload
+            </Button>
+          )}
+
+          {/* <InstagramEmbed
             url="https://instagr.am/p/CFH52gsgAvH/"
             maxWidth={320}
             hideCaption={false}
@@ -208,7 +214,7 @@ function App() {
             onSuccess={() => {}}
             onAfterRender={() => {}}
             onFailure={() => {}}
-          />
+          /> */}
         </div>
       </div>
     </div>
